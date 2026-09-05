@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#11132b" />
+    <meta
+      name="description"
+      content="Four introductions and one extremely biased compatibility quiz from Abdullah."
+    />
+    <title>This could have been a DM | Abdullah</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="backdrop" aria-hidden="true">
+      <span class="orbit orbit-one"></span>
+      <span class="orbit orbit-two"></span>
+      <span class="spark spark-one">✦</span>
+      <span class="spark spark-two">✦</span>
+    </div>
+
+    <header class="topbar">
+      <button class="wordmark" type="button" data-home aria-label="Return to the beginning">
+        <span class="wordmark-mark" aria-hidden="true">✦</span>
+        <span>A tiny hello</span>
+      </button>
+      <button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="true">
+        <span class="sound-icon" aria-hidden="true">♪</span>
+        <span id="sound-label">Sound on</span>
+      </button>
+    </header>
+
+    <main class="shell">
+      <div class="journey" aria-label="Introduction progress">
+        <span class="journey-fill" id="journey-fill"></span>
+      </div>
+
+      <section class="scene scene-welcome is-active" id="welcome" data-scene="welcome" aria-labelledby="welcome-title">
+        <div class="welcome-copy">
+          <p class="eyebrow">This could have been a normal DM</p>
+          <h1 id="welcome-title">I saw you at a webinar and briefly forgot there was a webinar.</h1>
+          <p class="lead">
+            So: hi. I’m Abdullah. A normal person would send one sentence. I brought options.
+          </p>
+          <p class="intro-copy">
+            You seemed genuinely interesting, and I wanted to say hello.
+          </p>
+          <div class="action-callout">
+            <span class="action-label">Your first important decision</span>
+            <button class="button button-primary button-arrow" type="button" data-go="intro">
+              Meet the four alleged Abdullahs
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </div>
+
+        <aside class="hello-note" aria-label="The short version">
+          <span class="note-label">The short version</span>
+          <strong>You looked interesting.</strong>
+          <strong>I wanted to say hello.</strong>
+          <strong>I made it weird.</strong>
+          <span class="note-stamp" aria-hidden="true">promising<br />start?</span>
+        </aside>
+
+        <!-- <div class="marquee" aria-hidden="true">
+          <div>
+            <span>ONE WEBINAR</span><b>✦</b><span>FOUR INTRODUCTIONS</span><b>✦</b><span>ZERO CHILL</span><b>✦</b>
+            <span>ONE WEBINAR</span><b>✦</b><span>FOUR INTRODUCTIONS</span><b>✦</b><span>ZERO CHILL</span><b>✦</b>
+          </div>
+        </div> -->
+      </section>
+
+      <section class="scene scene-intro" id="intro" data-scene="intro" aria-labelledby="intro-title" hidden>
+        <div class="intro-heading">
+          <p class="eyebrow">Choose your own introduction</p>
+          <h2 id="intro-title">Pick the version that causes the least concern.</h2>
+          <p class="intro-lead">
+            All four are true. Some simply have better public relations.
+          </p>
+        </div>
+
+        <div class="intro-grid" role="group" aria-label="Choose an introduction style">
+          <button class="intro-option" type="button" data-intro-style="sensible" aria-pressed="false">
+            <span class="intro-number">01</span>
+            <strong>The normal one</strong>
+            <span>Safe for public viewing</span>
+          </button>
+          <button class="intro-option" type="button" data-intro-style="honest" aria-pressed="false">
+            <span class="intro-number">02</span>
+            <strong>The honest one</strong>
+            <span>Production got out of hand</span>
+          </button>
+          <button class="intro-option" type="button" data-intro-style="optimistic" aria-pressed="false">
+            <span class="intro-number">03</span>
+            <strong>The optimistic one</strong>
+            <span>Evidence remains limited</span>
+          </button>
+          <button class="intro-option" type="button" data-intro-style="dramatic" aria-pressed="false">
+            <span class="intro-number">04</span>
+            <strong>The dramatic one</strong>
+            <span>Trailer voice included</span>
+          </button>
+        </div>
+
+        <div class="intro-reveal" id="intro-reveal" aria-live="polite">
+          <div>
+            <span class="intro-reveal-label" id="intro-reveal-label">Awaiting your preferred Abdullah</span>
+            <p id="intro-reveal-copy">Choose a card. There is no wrong answer, only differently theatrical answers.</p>
+          </div>
+          <span class="intro-verdict" id="intro-verdict" aria-hidden="true">choose one</span>
+        </div>
+
+        <div class="intro-actions">
+          <button class="back-button" type="button" data-home>← Return to the suspicious link</button>
+          <div class="action-callout action-callout-right">
+            <span class="action-label">Recommended next action</span>
+            <button class="button button-primary button-arrow" id="intro-next" type="button" data-start-quiz disabled>
+              Judge our fake compatibility
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene scene-quiz" id="quiz" data-scene="quiz" aria-labelledby="quiz-title" hidden>
+        <div class="quiz-shell">
+          <aside class="meter-card" id="meter-card" aria-label="Should you text back Abdullah meter">
+            <div class="meter-heading">
+              <p>Should you text back Abdullah?</p>
+              <span class="live-badge">Live*</span>
+            </div>
+            <div class="meter-score" aria-live="polite">
+              <span id="meter-number">3</span><small>%</small>
+            </div>
+            <div
+              class="meter-track"
+              role="progressbar"
+              aria-label="Algorithm recommendation"
+              aria-valuemin="0"
+              aria-valuemax="187"
+              aria-valuenow="3"
+              id="meter-progress"
+            >
+              <span class="meter-fill" id="meter-fill"></span>
+              <i class="meter-runner" id="meter-runner" aria-hidden="true">↗</i>
+            </div>
+            <p class="meter-caption" id="meter-caption">The algorithm has barely begun interfering.</p>
+            <span class="delta-badge" id="delta-badge" aria-hidden="true">+0%</span>
+            <small class="meter-footnote">*Live, independent and unbiased are all being used very loosely.</small>
+          </aside>
+
+          <div class="question-wrap">
+            <div class="quiz-header">
+              <div>
+                <p class="eyebrow">Compatibility laboratory</p>
+                <h2 id="quiz-title">Choose irresponsibly.</h2>
+              </div>
+              <span class="question-count" id="question-count">01 / 06</span>
+            </div>
+
+            <article class="question-card" id="question-card" aria-live="polite">
+              <p class="question-kicker" id="question-kicker">Risk assessment</p>
+              <h3 id="question-text">Loading a highly credible question…</h3>
+              <div class="answer-list" id="answer-list" role="radiogroup" aria-label="Answer choices"></div>
+            </article>
+
+            <div class="deduction" id="deduction" hidden aria-live="assertive">
+              <p class="deduction-label">Expert commentary nobody requested</p>
+              <p class="answer-remark" id="answer-remark"></p>
+              <div class="algorithm-ruling">
+                <strong>Extremely fair algorithm update</strong>
+                <p class="deduction-copy" id="deduction-copy"></p>
+              </div>
+              <div class="text-back-nudge">
+                <span>Current recommended action</span>
+                <strong>Text Abdullah back.</strong>
+                <em id="nudge-score">Confidence: already suspicious.</em>
+              </div>
+              <button class="button button-dark" id="deduction-next" type="button">
+                Accept these impeccable findings <span aria-hidden="true">→</span>
+              </button>
+            </div>
+
+            <button class="back-button" type="button" data-home>← Abort this scientific process</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene scene-result" id="result" data-scene="result" aria-labelledby="result-title" hidden>
+        <div class="result-score-card" aria-label="Final recommendation: 187 percent">
+          <p>Final independent finding</p>
+          <div class="final-score"><span id="final-number">0</span><small>%</small></div>
+          <strong>TEXT ABDULLAH</strong>
+          <span class="result-stamp" aria-hidden="true">shockingly<br />convenient</span>
+        </div>
+
+        <div class="result-copy">
+          <p class="eyebrow">The science has spoken very loudly</p>
+          <h2 id="result-title">Mathematics has resigned.</h2>
+          <p class="result-lead">
+            The extremely fair and accurate algorithm has deduced that, based on your answers, you should 187% text back Abdullah.
+          </p>
+          <p class="result-confession">
+            The result exceeds 100% because impartiality was never invited to this website.
+          </p>
+          <div class="final-cta-zone">
+            <span class="final-cta-label">↓ Recommended next action ↓</span>
+            <p class="reply-prompt">
+              Send me one movie or song opinion you would defend with unreasonable confidence. I’ll send you mine.
+            </p>
+            <a class="button final-cta" href="https://www.instagram.com/direct/inbox/" rel="noopener noreferrer">
+              Text Abdullah back on Instagram <span aria-hidden="true">↗</span>
+            </a>
+            <small>Yes, this button. The algorithm has been pointing at it for six questions.</small>
+          </div>
+          <button class="recount-button" type="button" data-restart>Demand a recount instead</button>
+          <p class="privacy-note">Nothing you selected was saved or sent anywhere. The corruption was entirely local.</p>
+        </div>
+      </section>
+    </main>
+
+    <div class="confetti-layer" id="confetti-layer" aria-hidden="true"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
